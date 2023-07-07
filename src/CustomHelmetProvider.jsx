@@ -1,7 +1,7 @@
 import {Helmet, HelmetProvider} from "react-helmet-async";
 
 const helmetContext = {
-    title: "React Rexdux Toolkit",
+    title: "React Redux Toolkit",
     description: "A simple app that uses Redux Toolkit to manage states in React and Ant Design for design.",
     keywords: "React, Redux, Redux Toolkit, Vite, Ant Design",
     author: "https://github.com/burakkrt"
