@@ -1,7 +1,7 @@
 import { Typography } from 'antd';
 function App() {
 
-    const {Title} = Typography;
+    const {Title, Text} = Typography;
 
   return (
     <div>
