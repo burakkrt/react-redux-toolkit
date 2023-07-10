@@ -34,7 +34,7 @@ export default function Todos() {
                 <div>
                     <button className="btn btn-danger fs-6" onClick={() => dispatch(clearTodos())}>
                         <AiOutlineClear
-                            className="align-top fs-5 me-1"/>
+                            className="align-top fs-5 me-1 "/>
                         Clear All
                     </button>
                 </div>

@@ -17,7 +17,7 @@ export default function Todo({todo}) {
         }
     }
 
-    function deleteTodoHandler(e) {
+    function deleteTodoHandler() {
         dispatch(deleteTodo(id))
     }
 
