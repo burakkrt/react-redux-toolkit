@@ -1,6 +1,3 @@
-import {CiSaveDown1} from "react-icons/ci";
-import {AiOutlineSave} from "react-icons/ai";
-
 export default function Modal() {
 
     return (
