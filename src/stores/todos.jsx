@@ -4,14 +4,14 @@ const initialState = {
     todos: [
         {
             id: 1,
-            desc: "Kahve yap",
-            date: '29.07.2023',
+            desc: "Make coffee.",
+            date: '27.06.2023',
             checked: true
         },
         {
             id: 2,
-            desc: "Çay koy",
-            date: '29.07.2023',
+            desc: "Check your mail.",
+            date: '30.06.2023',
             checked: false
         }
     ]
@@ -40,10 +40,17 @@ const todos = createSlice({
         },
         clearTodos: (state) => {
             state.todos = [];
+        },
+        modifiedTodo: (state, action) => {
+            state.todos.map(todo => {
+                if (todo.id === action.payload.id) {
+                    todo.desc = action.payload.desc
+                }
+            })
         }
     }
 })
 
-export const {addTodo, deleteTodo, doneTodo, clearTodos} = todos.actions;
+export const {addTodo, deleteTodo, doneTodo, clearTodos, modifiedTodo} = todos.actions;
 
 export default todos.reducer;

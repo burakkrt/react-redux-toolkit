@@ -32,7 +32,8 @@ export default function Todos() {
             <div className="d-flex flex-row justify-content-between align-items-center mb-3">
                 <span className="fs-4 text-uppercase fw-bold">TodoList</span>
                 <div>
-                    <button className="btn btn-danger fs-6" onClick={() => dispatch(clearTodos())}>
+                    <button className="btn btn-ms btn-outline-dark border-0 fs-6"
+                            onClick={() => dispatch(clearTodos())}>
                         <AiOutlineClear
                             className="align-top fs-5 me-1 "/>
                         Clear All

@@ -2,6 +2,7 @@ import {BiEdit} from "react-icons/bi";
 import {useDispatch} from 'react-redux';
 import {deleteTodo, doneTodo} from "../stores/todos.jsx";
 import {AiFillDelete} from "react-icons/ai";
+import {modify} from "../stores/modal.jsx";
 
 export default function Todo({todo}) {
 
@@ -21,6 +22,11 @@ export default function Todo({todo}) {
         dispatch(deleteTodo(id))
     }
 
+
+    function editTodoHandler() {
+        dispatch(modify({todoId: id, oldTodo: desc}))
+    }
+
     return (
         <div className="list-group-item list-group-item-action">
             <input className="form-check-input me-2  border-secondary pointer" type="checkbox"
@@ -28,7 +34,8 @@ export default function Todo({todo}) {
             <span className="me-1">{id} :</span>
             <span className={`align-middle ${checked && 'checked'}`} id={`todo${id}`}>{desc} <span
                 className="bg-warning-subtle py-1 px-2 rounded">Date : {date}</span></span>
-            <BiEdit className="text-info-emphasis ms-1 pointer" data-bs-toggle="modal" data-bs-target="#editTodo"/>
+            <BiEdit className="text-info-emphasis ms-1 pointer" data-bs-toggle="modal" onClick={editTodoHandler}
+                    data-bs-target="#editTodo"/>
             <AiFillDelete className="text-danger ms-1 pointer" onClick={deleteTodoHandler}/>
         </div>
     );

@@ -10,6 +10,7 @@ import Modal from "./Modal.jsx";
 import {Provider} from "react-redux"
 import {store} from "./stores/index.jsx"
 import TodosVisible from "./TodosVisible.jsx";
+import {AiFillGithub} from "react-icons/ai";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,6 +23,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     style={{minHeight: "100vh"}}>
                     <Todos/>
                     <TodosVisible/>
+                    <div className="position-absolute bottom-0 end-0 m-5">
+                        <a href="https://github.com/burakkrt" target="_blank" rel="noreferrer"
+                           className="text-white bg-dark px-3 py-2 rounded text-decoration-none d-flex gap-1 shadow"><AiFillGithub
+                            className="fs-5"/>Github</a>
+                    </div>
                 </div>
                 <Modal/>
             </Provider>
